@@ -1,0 +1,56 @@
+#add-success-alert,
+#update-success-alert,
+#delete-success-alert {
+    display: none !important;
+}
+
+#add-success-alert,
+#update-success-alert,
+#delete-success-alert {
+    animation-name: fadeInAndOut;
+    animation-duration: 5s;    
+}
+
+@keyframes fadeInAndOut {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}    
+}
+
+@-webkit-keyframes fadeInAndOut {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}    
+}
+
+.mat-accordion {
+    display: grid;
+    margin: auto;        
+    /* margin-top: 1rem;     */
+    width: 99%;
+}
+
+.mat-expansion-panel {
+    padding: 2px;
+}
+
+.mat-expansion-panel-header {    
+    background-color: #6479a3 !important;    
+}
+
+.mat-expansion-panel-header:hover {
+    background-color: #6479a3; 
+}
+
+.mat-expansion-panel-header-title {
+    color: #fff;
+    /* justify-content: center; */
+}
+
+body {
+    padding-bottom: 30px;
+}
+
+.my-pagination .ngx-pagination .current {
+    background: #394f7a;
+  }

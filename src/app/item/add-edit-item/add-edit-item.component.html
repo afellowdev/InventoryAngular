@@ -1,0 +1,47 @@
+<div class="d-flex flex-row bd-highlight mb-3">
+
+    <div class="form-group row">
+        <div class="mb-3">
+            <label for="name" class="form-label">Item *</label>
+            <input type="text" class="form-control" name="name" [(ngModel)]="name">
+        </div>
+        <div class="mb-3">
+            <label for="itemTypeId" class="form-label">Type *</label>
+            <select class="form-control" name="itemTypeId" id="itemTypeId" [(ngModel)]="itemTypeId">
+                <option *ngIf="id==0" value="">-- Please Choose --</option>
+                <option *ngFor="let type of itemTypeList$|async" [value]="type.id">{{type.type}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="itemLocationId" class="form-label">Location *</label>
+            <select class="form-control" name="itemLocationId" id="itemLocationId" [(ngModel)]="itemLocationId">
+                <option *ngIf="id==0" value="">-- Please Choose --</option>
+                <option *ngFor="let location of itemLocationList$|async" [value]="location.id">{{location.location}}</option>
+            </select>
+        </div>
+        <div class="mb-3">
+            <label for="notes" class="form-label">Notes *</label>
+            <input type="text" class="form-control" name="notes" [(ngModel)]="notes">
+        </div>
+    </div>
+
+    <div style="width: 20px"></div>
+
+    <div class="d-flex flex-row bd-highlight" >
+        <span >
+            <label class="form-label">Item Image</label><br>
+            <label for="files" class="btn btn-outline-primary mb-1">Choose file</label>        
+            <input id="files" type="file" (change)="uploadPhoto($event)" style="display: none;">
+
+            <img [src]="getIamgeFilePath()" height="200px" width="200px" class="mb-3">            
+
+            <button type="button" (click)="addItem()" *ngIf="item.id==0" class="btn btn-primary float-end">
+                Add Item</button>
+            <button type="button" (click)="updateItem()" *ngIf="item.id!=0" class="btn btn-primary float-end">
+                Update Item</button>
+        </span>
+    </div>
+
+</div>
+
+

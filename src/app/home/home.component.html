@@ -1,0 +1,39 @@
+<br>
+<h3 id="instruction">Drag one phase to another to form a sentence</h3>
+
+        <div id="welcomeMessage">            
+            <h3>Thanks for playing!</h3>       
+            <table>
+                <tr>
+                    <td style="font-weight:bold">Hi! I'm Kevin</td>
+                </tr>
+                <tr>
+                    <td>I enjoy building useful applications</td>
+                </tr>
+                <tr>
+                    <td style="font-weight:bold">Let's connect to discuss our mutual interests</td>
+                </tr>
+            </table>
+            <button (click)="playAgain()">Replay</button>            
+        </div>
+
+        <main class="container">   
+            <div>
+                <ul class="draggable-list">
+                    <li id="l1" draggable="true">My name is</li>
+                    <li id="l2" draggable="true">I enjoy</li>
+                    <li id="l3" draggable="true">Open</li>
+                </ul>
+            </div>
+            <div>
+                <ul class="draggable-list">
+                    <li id="r3" draggable="true">sesame!</li>
+                    <li id="r1" draggable="true">Kevin</li>
+                    <li id="r2" draggable="true">building apps</li>
+                </ul>
+            </div>      
+            <div id="hiddenDiv">
+                <label id="dragged"></label>
+                <label id="matched">0</label>
+            </div>        
+        </main>        
